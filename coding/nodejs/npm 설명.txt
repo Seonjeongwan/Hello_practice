@@ -1,0 +1,6 @@
+npm init 을 하게 되면 이제 모듈을 관리하기 위한 package.json 이 생성됨
+
+package.json 파일에서 dependencies 에 추가를 하게되면 이를 재 실행해서 정보에대해 다운로드 필요
+
+ppackage.json은 모듈을 관리하는데 package.json으로 module 한번에 다운로드 하기를  npm install 로 진행하면됨
+

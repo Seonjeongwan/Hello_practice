@@ -1,0 +1,21 @@
+만약 수백 수천줄에 달하는 html을 작성해서 res.send 해야 된다면 개발에 어려움을 줄 수 밖에 없음
+
+express 모듈은 외부 파일의 데이터를 읽어와 html 코드로 만든 다음 클아이언테으게 전달하는 기능을 제공하는데 이를 랜더링이라 부름
+
+express 에서 랜더링을 위해서르는 다른 모듈을 사용해야 하는데 여기에서는 ejs 모듈을 사용함
+
+- ejs 모듈 사용하기
+ejs 모듈을 사용하기 위해 모듈 객체를 생성 
+// var ejs = require("ejs");
+
+html 파일을 만들어 놓을 폴더를 지정
+// app.set("views", __.dirname + "views");
+
+랜더링에 사용할 모듈을 지정함
+// app.set("view engine", "ejs");
+
+html 일 경우 사용할 ejs 모듈을 지정
+// app.engine("html", ejs.renderFile);
+
+html 문세에서 css, js, image, 동영상, 사운드 파일들을 사용할떄 정적 파일이 위치하는 폴도를 지정하여 사용가능
+// public 이란 폴더 명으로 사용하여 넣어서 사용

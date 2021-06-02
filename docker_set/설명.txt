@@ -1,0 +1,18 @@
+- Docker image 빌드하기(생성하기)
+docker build -t [docker hub ID]/[Image Name]:[tag name]
+docker build -t sunnythek/test:tag1 . #여기서 띄어쓰기하고 점 찍어야 됨 주의
+
+이미지 실행
+-d로 이미지를 실행하면 분리 모드로 컨테이너를 실행해서 백그라운드에서 컨테이너가 돌아가도록 함
+-p 플래그는 공개 포트를 컨테이너 내의 비공개 포트로 리다이렉트함
+docker run -p 49160:8080 -d <your username>/<Image name>:<tag name>
+docker run -p 49160:8080 -d sunnythek/test:tag1
+
+# 컨테이너 아이디를 확인합니다 
+docker ps
+
+# 앱 로그를 출력합니다
+docker logs <container id>
+
+# 컨테이너에 들어갑니다
+docker exec -it <container id> /bin/bash

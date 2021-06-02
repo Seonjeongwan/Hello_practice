@@ -1,0 +1,65 @@
+ Node를 설치 후 vscode 에서 Terminal 창을 띄워 npm init 명령어를 실행
+npm install express --save 로 입력하면 express 관련 기본모듈이 모두 설치
+
+다음 식으로 출력되는 것들에 대해 입력
+
+Press ^C at any time to quit.
+package name: (nodejs)
+version: (1.0.0)
+description: node.js project
+entry point: (index.js)
+test command:
+git repository: <깃주소>https://github.com/Seonjeongwan/Hello_practice.git
+keywords: node.js
+author: <이름(jwseon)>
+license: (ISC)
+About to write to D:\workspace\Nodejs\package.json:      
+
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seonjeongwan/Hello_practice.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "jwseon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seonjeongwan/Hello_practice/issues"
+  },
+  "homepage": "https://github.com/Seonjeongwan/Hello_practice#readme",
+  "dependencies": {
+    "arraylist": "^0.1.0",
+    "express": "^4.17.1"
+}
+
+
+Is this OK? (yes) yes
+PS D:\workspace\Nodejs>
+
+내용확인 후 생성 이후
+
+npm install express --save 로 입력하면 express 관련 기본모듈이 모두 설치
+
+1) npm init으로 생성한 package.json
+
+2) npm install로 생성한 express node module
+
+- node module이 생성되면, package-lock.json과 node_modules라는 디렉토리가 생성
+
+- package.json 파일 하단에 dependencies 생성
+
+특히 dependencies의 경우 Node.js을 Runtime으로 실행 할 경우 실제 Application Package와 함께 packaging되는 Library 파일로 자동으로 버전 관리가 이루어짐
+
+여기서 다른 모듈과 같이 "express": "^4.17.1" 이렇게 되는데 "express": "*" 이렇게 사용시 최신버젼으로 자동 관리
+
+devDependencies로 추가되는 경우 배포하기 위한 패키징에 포함시키지 않도록 구분하여 관리할 수 있음. 쉽게 생각하자면 Testing 관련 라이브러리, 로그 관련 라이브러리 등 개발 환경에서 분석을 위해 추가한 라이브러리를 운영환경에 적용하지 않도록 관리할 수 있는 라이브러리 디펜던시라 할 수 있음
